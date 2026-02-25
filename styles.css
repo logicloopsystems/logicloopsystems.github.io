@@ -110,14 +110,13 @@ p{ margin: 0 0 14px; color: var(--muted); }
 }
 
 /* LANDING HERO */
-.landing{
-  position: relative;
-  min-height: calc(100vh - 64px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background: url("assets/landing.png") no-repeat center center / cover;
+.landing {
+  height: 100vh;
+  width: 100%;
+  background-image: url("assets/landing.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .landing__overlay{
   position:absolute;
