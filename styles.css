@@ -110,12 +110,10 @@ p{ margin: 0 0 14px; color: var(--muted); }
 }
 
 /* LANDING HERO */
-.landing {
-  height: 100vh;
-  width: 100%;
+.landing{
   background-image: url("assets/landing.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;  /* try 25%–50% */
   background-repeat: no-repeat;
 }
 .landing__overlay{
@@ -149,21 +147,12 @@ p{ margin: 0 0 14px; color: var(--muted); }
   text-shadow: 0 10px 40px rgba(0,0,0,.65);
 }
 .landing__cta{
-  display:flex;
-  gap: 14px;
-  justify-content:center;
-  flex-wrap:wrap;
-  margin-top: 10px;
+  margin-top: 18px;
 }
 
-/* Scroll indicator */
 .scroll{
-  display:inline-flex;
-  flex-direction:column;
-  align-items:center;
-  gap: 10px;
-  margin-top: 46px;
-  opacity: .9;
+  margin-top: 22px;
+  margin-bottom: 0;
 }
 .scroll__text{
   color: rgba(234,240,255,.70);
