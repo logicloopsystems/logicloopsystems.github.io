@@ -14,11 +14,11 @@
 </head>
 
 <body>
+
   <!-- Top Nav -->
   <header class="nav">
     <a class="brand" href="#top" aria-label="Logic Loop Systems home">
-      <!-- Choose logo: set src to assets/logo1.png or assets/logo3.png -->
-      <img class="brand__logo" src="assets/logo1.png" alt="Logic Loop Systems logo" />
+      <!-- optional: put a small logo here later -->
       <span class="brand__text">Logic Loop Systems</span>
     </a>
 
@@ -35,47 +35,28 @@
     </button>
   </header>
 
-  <!-- Hero -->
-  <main id="top" class="hero">
-    <div class="hero__bg">
-      <div class="glow"></div>
-      <div class="grid"></div>
-    </div>
+  <!-- LANDING HERO -->
+  <main id="top" class="landing" aria-label="Landing section">
+    <div class="landing__overlay"></div>
 
-    <section class="container hero__content">
-      <p class="pill">Industrial Automation • Robotics • Autonomy • AI</p>
+    <div class="landing__content container">
+      <h1 class="landing__title">Logic Loop Systems</h1>
+      <p class="landing__tagline">Closing the Loop on Intelligent Automation.</p>
 
-      <h1>Engineering Intelligent Control for Autonomous Systems</h1>
-
-      <p class="lead">
-        Advanced industrial automation, robotics, and embedded AI solutions designed for real-world deployment.
-      </p>
-
-      <p class="tagline">Closing the Loop on Intelligent Automation.</p>
-
-      <div class="hero__cta">
+      <div class="landing__cta">
         <a class="btn btn--primary" href="#solutions">Explore Solutions</a>
         <a class="btn btn--secondary" href="#contact">Request Consultation</a>
       </div>
 
-      <div class="hero__stats">
-        <div class="stat">
-          <div class="stat__k">Control</div>
-          <div class="stat__v">Real-time, stable architectures</div>
-        </div>
-        <div class="stat">
-          <div class="stat__k">Autonomy</div>
-          <div class="stat__v">Perception → planning → actuation</div>
-        </div>
-        <div class="stat">
-          <div class="stat__k">Deployment</div>
-          <div class="stat__v">Production-ready engineering</div>
-        </div>
-      </div>
-    </section>
+      <a class="scroll" href="#solutions" aria-label="Scroll down to content">
+        <span class="scroll__text">Scroll</span>
+        <span class="scroll__dot"></span>
+      </a>
+    </div>
   </main>
 
-  <!-- Solutions -->
+  <!-- FULL WEBSITE CONTENT BELOW -->
+
   <section id="solutions" class="section">
     <div class="container">
       <h2>Solutions</h2>
@@ -127,7 +108,6 @@
     </div>
   </section>
 
-  <!-- Approach -->
   <section class="section section--alt">
     <div class="container">
       <h2>Our Approach</h2>
@@ -135,16 +115,11 @@
 
       <div class="loop">
         <div class="loop__row">
-          <span class="loop__node">Sensor</span>
-          <span class="loop__arrow">→</span>
-          <span class="loop__node">Estimation</span>
-          <span class="loop__arrow">→</span>
-          <span class="loop__node">Control</span>
-          <span class="loop__arrow">→</span>
-          <span class="loop__node">Actuation</span>
-          <span class="loop__arrow">→</span>
-          <span class="loop__node">Feedback</span>
-          <span class="loop__arrow">→</span>
+          <span class="loop__node">Sensor</span><span class="loop__arrow">→</span>
+          <span class="loop__node">Estimation</span><span class="loop__arrow">→</span>
+          <span class="loop__node">Control</span><span class="loop__arrow">→</span>
+          <span class="loop__node">Actuation</span><span class="loop__arrow">→</span>
+          <span class="loop__node">Feedback</span><span class="loop__arrow">→</span>
           <span class="loop__node">Optimization</span>
         </div>
         <p class="loop__note">
@@ -154,7 +129,6 @@
     </div>
   </section>
 
-  <!-- Industries -->
   <section id="industries" class="section">
     <div class="container">
       <h2>Industries</h2>
@@ -170,7 +144,6 @@
     </div>
   </section>
 
-  <!-- Technology -->
   <section id="technology" class="section section--alt">
     <div class="container">
       <h2>Technology Stack</h2>
@@ -199,7 +172,6 @@
     </div>
   </section>
 
-  <!-- About -->
   <section id="about" class="section">
     <div class="container">
       <h2>About</h2>
@@ -209,6 +181,7 @@
           robotics, and industrial automation. We design precision-driven architectures that integrate
           real-time control, embedded systems, and autonomous intelligence into next-generation machines.
         </p>
+
         <div class="about__highlights">
           <div class="mini">
             <h4>Engineering-first</h4>
@@ -227,18 +200,15 @@
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section section--alt">
     <div class="container">
       <h2>Contact</h2>
-      <p class="sub">Tell us about your system, timeline, and goals. We’ll respond with a practical path forward.</p>
+      <p class="sub">Replace the email below with your real business email.</p>
 
       <div class="contact">
         <div class="contact__card">
           <h3>Get in touch</h3>
-          <p class="muted">Replace the email below with your real business email.</p>
           <p class="contact__line"><strong>Email:</strong> <a href="mailto:hello@logicloopsystems.com">hello@logicloopsystems.com</a></p>
-          <p class="contact__line"><strong>Location:</strong> United States</p>
           <p class="contact__line"><strong>Focus:</strong> Industrial automation, robotics, autonomy, AI</p>
         </div>
 
@@ -255,12 +225,10 @@
             Message
             <textarea rows="5" placeholder="Briefly describe your project..."></textarea>
           </label>
-          <button class="btn btn--primary" type="button" onclick="alert('This is a demo form. Connect Formspree or a backend to receive messages.')">
+          <button class="btn btn--primary" type="button"
+            onclick="alert('Demo form. Use Formspree/Basin/Netlify Forms to receive submissions.')">
             Send Message
           </button>
-          <p class="muted small">
-            Tip: For GitHub Pages, use Formspree / Basin / Netlify Forms (or link to email) to receive messages.
-          </p>
         </form>
       </div>
     </div>
@@ -269,7 +237,6 @@
   <footer class="footer">
     <div class="container footer__row">
       <div class="footer__left">
-        <img class="footer__logo" src="assets/logo1.png" alt="Logic Loop Systems logo" />
         <div>
           <div class="footer__name">Logic Loop Systems</div>
           <div class="footer__tag">Closing the Loop on Intelligent Automation.</div>
@@ -295,6 +262,7 @@
       toggle.setAttribute('aria-expanded', String(!expanded));
       links.classList.toggle('nav__links--open');
     });
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
