@@ -130,7 +130,13 @@ p{ margin: 0 0 14px; color: var(--muted); }
 .landing__content{
   position: relative;
   z-index: 2;
-  padding: 70px 0 40px;
+  min-height: calc(100vh - 64px); /* accounts for sticky nav */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;      /* pushes content down */
+  align-items: center;
+  text-align: center;
+  padding: 40px 0 60px;           /* bottom spacing */
 }
 .landing__title{
   color: var(--text);
