@@ -109,47 +109,109 @@ p{ margin: 0 0 14px; color: var(--muted); }
   color: var(--text);
 }
 
-/* LANDING HERO */
+/* ===== LANDING HERO ===== */
+
 .landing{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+
   background-image: url("assets/landing.png");
   background-size: cover;
-  background-position: center 35%;  /* try 25%–50% */
+  background-position: center 30%;   /* adjust 20%–40% if needed */
   background-repeat: no-repeat;
 }
+
+/* Light overlay so image is visible */
 .landing__overlay{
   position:absolute;
   inset:0;
-  /* lighter overlay so image shows */
-  background: linear-gradient(180deg,
+  background: linear-gradient(
+    to bottom,
     rgba(0,0,0,0.15),
     rgba(0,0,0,0.35)
   );
 }
+
+/* Move content toward bottom */
 .landing__content{
   position: relative;
   z-index: 2;
-  min-height: calc(100vh - 64px); /* accounts for sticky nav */
+
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;      /* pushes content down */
+  justify-content: flex-end;   /* pushes content down */
   align-items: center;
   text-align: center;
-  padding: 40px 0 60px;           /* bottom spacing */
-}
-.landing__title{
-  color: var(--text);
-  text-shadow: 0 10px 40px rgba(0,0,0,.65);
-}
-.landing__tagline{
-  color: rgba(234,240,255,.90);
-  font-weight: 600;
-  margin-bottom: 18px;
-  text-shadow: 0 10px 40px rgba(0,0,0,.65);
-}
-.landing__cta{
-  margin-top: 18px;
+
+  padding-bottom: 80px;        /* spacing from bottom */
 }
 
+/* Title styling */
+.landing__title{
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: white;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+/* Tagline */
+.landing__tagline{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Buttons spacing */
+.landing__cta{
+  display: flex;
+  gap: 16px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+/* Scroll indicator */
+.scroll{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.scroll__text{
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.8);
+}
+
+.scroll__dot{
+  width: 18px;
+  height: 28px;
+  border: 2px solid rgba(255,255,255,0.7);
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll__dot::after{
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  transform: translateX(-50%);
+  animation: scrollBounce 1.5s infinite;
+}
+
+@keyframes scrollBounce{
+  0%,100%{ transform: translate(-50%, 0); opacity: 1; }
+  50%{ transform: translate(-50%, 8px); opacity: 0.5; }
+}
 .scroll{
   margin-top: 22px;
   margin-bottom: 0;
