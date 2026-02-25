@@ -1,62 +1,301 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-<title>Logic Loop Systems</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {
-margin: 0;
-font-family: Arial, sans-serif;
-background: #0a0f1c;
-color: white;
-text-align: center;
-}
-header {
-padding: 100px 20px;
-}
-h1 {
-font-size: 48px;
-}
-p {
-font-size: 20px;
-color: #00d4ff;
-}
-section {
-padding: 60px 20px;
-}
-.footer {
-background: #111;
-padding: 20px;
-font-size: 14px;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Logic Loop Systems — Closing the Loop on Intelligent Automation." />
+  <title>Logic Loop Systems</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- Top Nav -->
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Logic Loop Systems home">
+      <!-- Choose logo: set src to assets/logo1.png or assets/logo3.png -->
+      <img class="brand__logo" src="assets/logo1.png" alt="Logic Loop Systems logo" />
+      <span class="brand__text">Logic Loop Systems</span>
+    </a>
 
-<header>
-<h1>Logic Loop Systems</h1>
-<p>Engineering Intelligence into Motion</p>
-</header>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#solutions">Solutions</a>
+      <a href="#industries">Industries</a>
+      <a href="#technology">Technology</a>
+      <a href="#about">About</a>
+      <a class="btn btn--ghost" href="#contact">Contact</a>
+    </nav>
 
-<section>
-<h2>What We Do</h2>
-<p>Autonomy | Robotics | Controls | AI Integration</p>
-</section>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
-<section>
-<h2>Industries</h2>
-<p>Industrial Automation • Construction Equipment • Embedded Systems</p>
-</section>
+  <!-- Hero -->
+  <main id="top" class="hero">
+    <div class="hero__bg">
+      <div class="glow"></div>
+      <div class="grid"></div>
+    </div>
 
-<section>
-<h2>Contact</h2>
-<p>Email: logicloopsystems@gmail.com</p>
-</section>
+    <section class="container hero__content">
+      <p class="pill">Industrial Automation • Robotics • Autonomy • AI</p>
 
-<div class="footer">
-© 2026 Logic Loop Systems. All rights reserved.
-</div>
+      <h1>Engineering Intelligent Control for Autonomous Systems</h1>
 
+      <p class="lead">
+        Advanced industrial automation, robotics, and embedded AI solutions designed for real-world deployment.
+      </p>
+
+      <p class="tagline">Closing the Loop on Intelligent Automation.</p>
+
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#solutions">Explore Solutions</a>
+        <a class="btn btn--secondary" href="#contact">Request Consultation</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <div class="stat__k">Control</div>
+          <div class="stat__v">Real-time, stable architectures</div>
+        </div>
+        <div class="stat">
+          <div class="stat__k">Autonomy</div>
+          <div class="stat__v">Perception → planning → actuation</div>
+        </div>
+        <div class="stat">
+          <div class="stat__k">Deployment</div>
+          <div class="stat__v">Production-ready engineering</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Solutions -->
+  <section id="solutions" class="section">
+    <div class="container">
+      <h2>Solutions</h2>
+      <p class="sub">
+        We design full-loop intelligent systems—from sensing to actuation—built for industrial-grade reliability.
+      </p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Industrial Automation</h3>
+          <p>Real-time control architectures, motion/stability logic, and machine network integration.</p>
+          <ul>
+            <li>PLC & embedded control design</li>
+            <li>CAN / J1939 / EtherCAT integration</li>
+            <li>Real-time performance optimization</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Robotics Engineering</h3>
+          <p>Robust robotics stacks—kinematics, navigation, sensor fusion, and motion control.</p>
+          <ul>
+            <li>Kinematics & motion planning</li>
+            <li>Sensor integration & fusion</li>
+            <li>Autonomous navigation</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Autonomy & AI</h3>
+          <p>Embedded AI and autonomy that integrates directly into the control loop.</p>
+          <ul>
+            <li>State estimation & perception</li>
+            <li>Edge AI deployment</li>
+            <li>Decision + control integration</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Validation & Testing</h3>
+          <p>Structured verification to ensure stability, safety, and production readiness.</p>
+          <ul>
+            <li>HIL / SIL validation</li>
+            <li>Fault & stability analysis</li>
+            <li>Performance benchmarking</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section class="section section--alt">
+    <div class="container">
+      <h2>Our Approach</h2>
+      <p class="sub">Closed-loop engineering that delivers predictable performance in the real world.</p>
+
+      <div class="loop">
+        <div class="loop__row">
+          <span class="loop__node">Sensor</span>
+          <span class="loop__arrow">→</span>
+          <span class="loop__node">Estimation</span>
+          <span class="loop__arrow">→</span>
+          <span class="loop__node">Control</span>
+          <span class="loop__arrow">→</span>
+          <span class="loop__node">Actuation</span>
+          <span class="loop__arrow">→</span>
+          <span class="loop__node">Feedback</span>
+          <span class="loop__arrow">→</span>
+          <span class="loop__node">Optimization</span>
+        </div>
+        <p class="loop__note">
+          This architecture ensures stability, fault tolerance, and scalable deployment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="section">
+    <div class="container">
+      <h2>Industries</h2>
+      <p class="sub">We support automation leaders and autonomy innovators across industrial domains.</p>
+
+      <div class="chips">
+        <span class="chip">Smart Manufacturing</span>
+        <span class="chip">Heavy Equipment Automation</span>
+        <span class="chip">Autonomous Ground Vehicles</span>
+        <span class="chip">Warehouse Robotics</span>
+        <span class="chip">Industrial Platforms</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technology -->
+  <section id="technology" class="section section--alt">
+    <div class="container">
+      <h2>Technology Stack</h2>
+      <p class="sub">A practical toolchain for real-time systems and autonomous platforms.</p>
+
+      <div class="tech">
+        <div class="tech__col">
+          <h3>Software</h3>
+          <ul>
+            <li>ROS / ROS2</li>
+            <li>MATLAB / Simulink</li>
+            <li>Embedded C / C++</li>
+            <li>Python (AI/automation workflows)</li>
+          </ul>
+        </div>
+        <div class="tech__col">
+          <h3>Systems</h3>
+          <ul>
+            <li>CAN / J1939 / EtherCAT</li>
+            <li>GNSS / IMU sensor fusion</li>
+            <li>RTOS / real-time pipelines</li>
+            <li>HIL / SIL validation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About</h2>
+      <div class="about">
+        <p>
+          Logic Loop Systems is an advanced engineering firm specializing in intelligent control systems,
+          robotics, and industrial automation. We design precision-driven architectures that integrate
+          real-time control, embedded systems, and autonomous intelligence into next-generation machines.
+        </p>
+        <div class="about__highlights">
+          <div class="mini">
+            <h4>Engineering-first</h4>
+            <p>Deterministic performance and industrial reliability.</p>
+          </div>
+          <div class="mini">
+            <h4>Integrated intelligence</h4>
+            <p>AI engineered into the loop—not bolted on.</p>
+          </div>
+          <div class="mini">
+            <h4>Production-ready</h4>
+            <p>Designed for scalability and long-term maintainability.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section section--alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="sub">Tell us about your system, timeline, and goals. We’ll respond with a practical path forward.</p>
+
+      <div class="contact">
+        <div class="contact__card">
+          <h3>Get in touch</h3>
+          <p class="muted">Replace the email below with your real business email.</p>
+          <p class="contact__line"><strong>Email:</strong> <a href="mailto:hello@logicloopsystems.com">hello@logicloopsystems.com</a></p>
+          <p class="contact__line"><strong>Location:</strong> United States</p>
+          <p class="contact__line"><strong>Focus:</strong> Industrial automation, robotics, autonomy, AI</p>
+        </div>
+
+        <form class="form" onsubmit="return false;">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="you@company.com" />
+          </label>
+          <label>
+            Message
+            <textarea rows="5" placeholder="Briefly describe your project..."></textarea>
+          </label>
+          <button class="btn btn--primary" type="button" onclick="alert('This is a demo form. Connect Formspree or a backend to receive messages.')">
+            Send Message
+          </button>
+          <p class="muted small">
+            Tip: For GitHub Pages, use Formspree / Basin / Netlify Forms (or link to email) to receive messages.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <div class="footer__left">
+        <img class="footer__logo" src="assets/logo1.png" alt="Logic Loop Systems logo" />
+        <div>
+          <div class="footer__name">Logic Loop Systems</div>
+          <div class="footer__tag">Closing the Loop on Intelligent Automation.</div>
+        </div>
+      </div>
+      <div class="footer__right">
+        <a href="#solutions">Solutions</a>
+        <a href="#technology">Technology</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> Logic Loop Systems. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav__toggle');
+    const links  = document.querySelector('.nav__links');
+    toggle?.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links.classList.toggle('nav__links--open');
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
