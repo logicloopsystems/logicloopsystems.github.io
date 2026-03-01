@@ -727,13 +727,13 @@ figure {
 
 /* Remove glass/panel styling behind the LOGO only */
 .wrapper-navbar.logo{
-  background: transparent !important;
-  background-image: none !important;
-  -webkit-backdrop-filter: none !important;
-  backdrop-filter: none !important;
-  border: none !important;
-  box-shadow: none !important;
-  padding: 0 !important;              /* optional: removes extra panel padding */
+  background: transparent;
+  background-image: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;              /* optional: removes extra panel padding */
 
 
 .wrapper-link-navbar {
