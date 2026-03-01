@@ -734,7 +734,7 @@ figure {
   border: none;
   box-shadow: none;
   padding: 0;              /* optional: removes extra panel padding */
-
+}
 
 .wrapper-link-navbar {
   grid-column-gap: 2.5vw;
