@@ -3568,3 +3568,572 @@ figure {
 }
 
 
+
+
+/* Logic Loop Systems header refinement */
+.navbar {
+  align-items: center;
+}
+
+.wrapper-navbar.logo {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.35rem 0.85rem 0.35rem 0.45rem;
+  min-height: auto;
+}
+
+.brand-link {
+  grid-column-gap: 0.55rem;
+  grid-row-gap: 0.55rem;
+  color: var(--color--white);
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.logo-navbar {
+  width: 2.15rem;
+  height: 2.15rem;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.brand-text {
+  color: var(--color--white);
+  letter-spacing: -0.02em;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.wrapper-navbar.menu {
+  padding: 0.5rem 0.85rem;
+  min-height: auto;
+}
+
+.wrapper-link-navbar {
+  grid-column-gap: 1.1rem;
+  grid-row-gap: 1.1rem;
+  align-items: center;
+}
+
+.text-secondary.menu.v1 {
+  font-size: 0.88rem;
+  line-height: 1.1;
+  padding: 0.15rem 0;
+}
+
+@media screen and (max-width: 991px) {
+  .brand-text {
+    display: none;
+  }
+  .wrapper-navbar.logo {
+    padding: 0.25rem;
+  }
+  .logo-navbar {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+
+/* Logic Loop Systems requested header/menu sizing update */
+.text-secondary.menu.v1 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.logo-navbar {
+  width: 4rem;
+  height: 4rem;
+}
+
+.brand-link {
+  grid-column-gap: 0.75rem;
+  grid-row-gap: 0.75rem;
+}
+
+.brand-text {
+  font-size: 1.05rem;
+}
+
+.wrapper-navbar.logo {
+  padding: 0.45rem 1rem 0.45rem 0.55rem;
+}
+
+.wrapper-navbar.menu {
+  padding: 0.6rem 1rem;
+}
+
+@media screen and (max-width: 991px) {
+  .logo-navbar {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+
+/* Logic Loop Systems white icon global update */
+.logo-navbar {
+  width: 5.25rem;
+  height: 5.25rem;
+  object-fit: contain;
+}
+.wrapper-navbar.logo {
+  padding: 0.35rem 1.05rem 0.35rem 0.45rem;
+}
+.brand-link {
+  grid-column-gap: 0.9rem;
+  grid-row-gap: 0.9rem;
+}
+.brand-text {
+  font-size: 1.15rem;
+  line-height: 1.05;
+}
+.logo-footer img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+}
+@media screen and (max-width: 991px) {
+  .logo-navbar {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .logo-footer img {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+
+/* Logic Loop Systems collaboration/logo placeholder update */
+.logo-partner {
+  filter: none;
+  opacity: 0.92;
+  max-height: 4.25rem;
+  max-width: 14rem;
+  object-fit: contain;
+}
+.block-partner {
+  max-width: 15vw;
+  min-width: 12rem;
+}
+.block-partner:hover .logo-partner {
+  opacity: 1;
+}
+.image-icon-integration {
+  object-fit: contain;
+  filter: none;
+}
+.logo-navbar {
+  width: 6.5rem;
+  height: 6.5rem;
+}
+.wrapper-navbar.logo {
+  padding: 0.25rem 1.1rem 0.25rem 0.35rem;
+}
+@media screen and (max-width: 991px) {
+  .logo-navbar {
+    width: 4.25rem;
+    height: 4.25rem;
+  }
+  .block-partner {
+    min-width: 10rem;
+    max-width: 40vw;
+  }
+}
+
+
+/* Platforms & Technologies carousel rebuild */
+.wrapper-partner {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+}
+.block-title-partner.v1 {
+  max-width: 42rem;
+}
+.block-title-partner.v2 {
+  align-items: flex-end;
+}
+.partner {
+  height: 7.5rem;
+  align-items: center;
+  gap: 5rem;
+}
+.block-partners, .block-partner-move {
+  width: 320vw;
+}
+.block-partner {
+  min-width: 13.5rem;
+  max-width: 13.5rem;
+  height: 7rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 1rem;
+  background: rgba(255,255,255,.025);
+  transition: transform .25s ease, background-color .25s ease, border-color .25s ease;
+}
+.block-partner:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,.055);
+  border-color: rgba(144,113,255,.35);
+}
+.logo-partner {
+  width: 100%;
+  height: 4.4rem;
+  max-width: 11.5rem;
+  max-height: 4.4rem;
+  object-fit: contain;
+  filter: none;
+  opacity: .96;
+}
+.block-partner:hover .logo-partner {
+  opacity: 1;
+}
+.image-icon-integration {
+  object-fit: contain;
+  filter: none;
+  width: 70%;
+  height: 70%;
+}
+.logo-navbar {
+  width: 7.25rem;
+  height: 7.25rem;
+}
+.wrapper-navbar.logo {
+  padding: .25rem 1.25rem .25rem .35rem;
+}
+@media screen and (max-width: 991px) {
+  .logo-navbar { width: 5.5rem; height: 5.5rem; }
+  .partner { gap: 2rem; height: 6.75rem; }
+  .block-partner { min-width: 11.5rem; max-width: 11.5rem; height: 6.25rem; }
+  .logo-partner { height: 3.8rem; max-height: 3.8rem; }
+}
+
+
+/* Final technology logo asset update */
+.block-partner {
+  min-width: 14.5rem;
+  max-width: 14.5rem;
+  height: 7.25rem;
+  padding: 1rem 1.3rem;
+}
+.logo-partner {
+  width: 100%;
+  height: 4.8rem;
+  max-width: 12.5rem;
+  max-height: 4.8rem;
+  object-fit: contain;
+  object-position: center;
+  filter: none !important;
+  opacity: 1;
+}
+.partner {
+  height: 7.75rem;
+  align-items: center;
+  gap: 4.5rem;
+}
+.block-partners, .block-partner-move {
+  width: 380vw;
+}
+.image-icon-integration {
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+  filter: none !important;
+}
+@media screen and (max-width: 991px) {
+  .block-partner { min-width: 12rem; max-width: 12rem; height: 6.25rem; }
+  .logo-partner { height: 4rem; max-height: 4rem; }
+}
+
+
+/* Logic Loop Systems v1.0.0 technology logo and integration update */
+.partner {
+  height: 8rem;
+  align-items: center;
+  gap: 4.25rem;
+}
+.block-partners, .block-partner-move {
+  width: 520vw;
+}
+.block-partner {
+  min-width: 14.75rem;
+  max-width: 14.75rem;
+  height: 7.5rem;
+  padding: 1rem 1.3rem;
+}
+.logo-partner {
+  width: 100%;
+  height: 5rem;
+  max-width: 12.75rem;
+  max-height: 5rem;
+  object-fit: contain;
+  object-position: center;
+  filter: none !important;
+  opacity: 1;
+}
+.wrapper-icon-integration {
+  position: relative;
+  display: grid !important;
+  grid-template-columns: repeat(9, minmax(4.75rem, 1fr));
+  gap: 1rem;
+  width: min(100%, 78rem);
+  height: auto !important;
+  margin-top: 1.25rem;
+  align-items: center;
+}
+.icon-integration,
+.icon-integration.v1,
+.icon-integration.v2,
+.icon-integration.v3,
+.icon-integration.v4,
+.icon-integration.v5,
+.icon-integration.v6,
+.icon-integration.v7,
+.icon-integration.v8,
+.icon-integration.v9 {
+  position: relative !important;
+  inset: auto !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 6.75rem;
+  padding: 1rem;
+  background: rgba(255,255,255,.035);
+  border-color: rgba(255,255,255,.10);
+  transition: transform .25s ease, border-color .25s ease, background-color .25s ease;
+}
+.icon-integration:hover {
+  transform: translateY(-4px);
+  border-color: rgba(144,113,255,.40);
+  background: rgba(255,255,255,.065);
+}
+.image-icon-integration {
+  width: 4.5rem !important;
+  height: 4.5rem !important;
+  object-fit: contain;
+  filter: none !important;
+}
+@media screen and (max-width: 991px) {
+  .block-partners, .block-partner-move { width: 760vw; }
+  .block-partner { min-width: 12rem; max-width: 12rem; height: 6.25rem; }
+  .logo-partner { height: 4rem; max-height: 4rem; }
+  .wrapper-icon-integration { grid-template-columns: repeat(3, 1fr); width: 100%; }
+  .icon-integration { min-height: 5.75rem; }
+  .image-icon-integration { width: 3.75rem !important; height: 3.75rem !important; }
+}
+@media screen and (max-width: 479px) {
+  .wrapper-icon-integration { grid-template-columns: repeat(2, 1fr); gap: .75rem; }
+}
+
+
+/* Logic Loop Systems v1.1.1 compact hero + technology carousel update */
+.text-hero {
+  max-width: 68rem;
+}
+.lottie-scroll {
+  display: none !important;
+}
+.wrapper-content-hero {
+  min-height: 0 !important;
+  height: auto !important;
+  padding-bottom: 0 !important;
+}
+.wrapper-partner {
+  padding-top: 2.25rem !important;
+  padding-bottom: 2.75rem !important;
+  gap: 1.4rem !important;
+}
+.title-partner {
+  align-items: center !important;
+}
+.block-title-partner.v1 {
+  max-width: 34rem !important;
+}
+.wrapper-partners {
+  margin-top: .25rem !important;
+}
+.partner {
+  height: 6.25rem !important;
+  gap: 3.25rem !important;
+}
+.block-partner {
+  min-width: 12.75rem !important;
+  max-width: 12.75rem !important;
+  height: 5.9rem !important;
+  padding: .75rem 1rem !important;
+}
+.logo-partner {
+  height: 4rem !important;
+  max-height: 4rem !important;
+  max-width: 11.25rem !important;
+}
+.block-partners, .block-partner-move {
+  width: 460vw !important;
+}
+@media screen and (max-width: 991px) {
+  .wrapper-partner { padding-top: 1.75rem !important; padding-bottom: 2rem !important; }
+  .title-partner { flex-direction: column !important; align-items: flex-start !important; gap: .8rem !important; }
+  .partner { height: 5.5rem !important; gap: 2rem !important; }
+  .block-partner { min-width: 10.5rem !important; max-width: 10.5rem !important; height: 5rem !important; }
+  .logo-partner { height: 3.25rem !important; max-height: 3.25rem !important; }
+  .block-partners, .block-partner-move { width: 620vw !important; }
+}
+
+/* Logic Loop Systems v1.1.3 - above-the-fold home layout
+   Edit the hero headline in index.html at: <div class="text-hero">...</div> */
+#hero .wrapper-hero {
+  height: 58vh !important;
+  min-height: 430px !important;
+  justify-content: center !important;
+}
+#hero .wrapper-text-hero {
+  padding-top: 5.5rem !important;
+  width: min(72rem, 86vw) !important;
+  flex: 0 1 auto !important;
+}
+#hero .text-hero {
+  max-width: 74rem !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+#hero .bg-animation-hero {
+  opacity: .55 !important;
+}
+#hero + .main-section .wrapper-partner {
+  padding-top: .75rem !important;
+  padding-bottom: 1.25rem !important;
+  gap: .75rem !important;
+}
+#hero + .main-section .title-partner {
+  align-items: center !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+#hero + .main-section .block-title-partner.v1 {
+  max-width: 42rem !important;
+}
+#hero + .main-section .small-text.animation {
+  line-height: 1.35 !important;
+}
+#hero + .main-section .wrapper-partners {
+  margin-top: 0 !important;
+}
+#hero + .main-section .partner {
+  height: 4.9rem !important;
+  gap: 2.35rem !important;
+}
+#hero + .main-section .block-partner {
+  min-width: 10.5rem !important;
+  max-width: 10.5rem !important;
+  height: 4.65rem !important;
+  padding: .45rem .8rem !important;
+}
+#hero + .main-section .logo-partner {
+  height: 3.05rem !important;
+  max-height: 3.05rem !important;
+  max-width: 9.4rem !important;
+}
+#hero + .main-section .block-partners,
+#hero + .main-section .block-partner-move {
+  width: 420vw !important;
+}
+@media screen and (min-width: 992px) {
+  #hero + .main-section {
+    margin-top: -1rem !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  #hero .wrapper-hero {
+    height: 56vh !important;
+    min-height: 380px !important;
+  }
+  #hero .wrapper-text-hero {
+    padding-top: 4.25rem !important;
+  }
+  #hero + .main-section .title-partner {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: .45rem !important;
+  }
+  #hero + .main-section .partner {
+    height: 4.5rem !important;
+    gap: 1.6rem !important;
+  }
+  #hero + .main-section .block-partner {
+    min-width: 8.5rem !important;
+    max-width: 8.5rem !important;
+    height: 4.25rem !important;
+  }
+  #hero + .main-section .logo-partner {
+    height: 2.65rem !important;
+    max-height: 2.65rem !important;
+    max-width: 7.7rem !important;
+  }
+}
+
+/* Logic Loop Systems v1.1.4 - balanced above-the-fold layout
+   Goal: show hero + Platforms & Technologies on open, without pulling
+   "What We Build / Engineering Capabilities" into the first screen. */
+#hero .wrapper-hero {
+  height: 66vh !important;
+  min-height: 500px !important;
+  justify-content: center !important;
+}
+#hero .wrapper-text-hero {
+  padding-top: 6.25rem !important;
+  width: min(74rem, 88vw) !important;
+}
+#hero + .main-section {
+  margin-top: 0 !important;
+}
+#hero + .main-section .wrapper-partner {
+  padding-top: 1.65rem !important;
+  padding-bottom: 3.25rem !important;
+  gap: 1.25rem !important;
+}
+#hero + .main-section .partner {
+  height: 6.25rem !important;
+  gap: 3rem !important;
+}
+#hero + .main-section .block-partner {
+  min-width: 12.5rem !important;
+  max-width: 12.5rem !important;
+  height: 5.75rem !important;
+  padding: .75rem 1rem !important;
+}
+#hero + .main-section .logo-partner {
+  height: 3.85rem !important;
+  max-height: 3.85rem !important;
+  max-width: 11rem !important;
+}
+#product {
+  margin-top: 1.5rem !important;
+}
+@media screen and (max-width: 991px) {
+  #hero .wrapper-hero {
+    height: 62vh !important;
+    min-height: 430px !important;
+  }
+  #hero + .main-section .wrapper-partner {
+    padding-top: 1.25rem !important;
+    padding-bottom: 2.6rem !important;
+  }
+  #hero + .main-section .partner {
+    height: 5.4rem !important;
+    gap: 2rem !important;
+  }
+  #hero + .main-section .block-partner {
+    min-width: 10.5rem !important;
+    max-width: 10.5rem !important;
+    height: 5rem !important;
+  }
+  #hero + .main-section .logo-partner {
+    height: 3.2rem !important;
+    max-height: 3.2rem !important;
+    max-width: 9.5rem !important;
+  }
+}
