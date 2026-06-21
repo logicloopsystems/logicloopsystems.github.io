@@ -700,15 +700,16 @@ figure {
 
 .navbar {
   z-index: 999;
-  padding-top: var(--layout--section-spacing);
+  padding: 1.2rem 2.5rem 0 2.5rem;
   grid-column-gap: 1vw;
   grid-row-gap: 1vw;
   flex-flow: row;
-  justify-content: center;
-  align-items: stretch;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   display: flex;
   position: absolute;
+  box-sizing: border-box;
 }
 
 .wrapper-navbar {
@@ -725,21 +726,29 @@ figure {
   display: flex;
 }
 
-/* Remove glass/panel styling behind the LOGO only */
-.wrapper-navbar.logo{
+.wrapper-navbar.logo {
   background: transparent;
   background-image: none;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   border: none;
   box-shadow: none;
-  padding: 0;              /* optional: removes extra panel padding */
+  padding: 0;
+  margin-right: auto;
+  position: relative;
+  left: -0.1rem;
+}
+
+.wrapper-navbar.menu {
+  position: relative;
+  left: -12rem;
 }
 
 .wrapper-link-navbar {
-  grid-column-gap: 2.5vw;
-  grid-row-gap: 2.5vw;
+  grid-column-gap: 1.4rem;
+  grid-row-gap: 1.4rem;
   display: flex;
+  align-items: center;
 }
 
 .text-dark {
@@ -763,7 +772,7 @@ figure {
 .text-hero {
   font-size: var(--text-typography--hero-size);
   line-height: var(--text-typography--hero-height);
-  font-weight: var(--font-weight--400);
+  font-weight: var(--font-weight--200);
   text-align: center;
 }
 
@@ -2095,7 +2104,7 @@ figure {
 .block-footer {
   z-index: 1;
   padding: var(--gap--gap-4x) var(--layout--container-spacing) var(--layout--section-spacing);
-  background-color: var(--color--white);
+  background-color: var(--color--almost-black);
   height: 100%;
   display: flex;
 }
@@ -2428,7 +2437,7 @@ figure {
     --layout--content-top-bottom-padding: .75vw;
     --layout--content-left-right-padding: 1.6vw;
     --border--border-rounded: 999vw;
-    --text-typography--hero-size: 5vw;
+    --text-typography--hero-size: 3.5vw;
     --text-typography--hero-height: 5.5vw;
     --gap--gap-1x: 1vw;
     --miscellaneous--padding-sub-content: 1vw;
@@ -3578,7 +3587,7 @@ figure {
 .wrapper-navbar.logo {
   align-items: center;
   justify-content: flex-start;
-  padding: 0.35rem 0.85rem 0.35rem 0.45rem;
+  padding: 0.35rem 0.85rem 0.35rem 0.0rem;
   min-height: auto;
 }
 
@@ -3613,7 +3622,7 @@ figure {
 }
 
 .wrapper-link-navbar {
-  grid-column-gap: 1.1rem;
+  grid-column-gap: 2rem;
   grid-row-gap: 1.1rem;
   align-items: center;
 }
@@ -3934,14 +3943,6 @@ figure {
 .text-hero {
   max-width: 68rem;
 }
-.lottie-scroll {
-  display: none !important;
-}
-.wrapper-content-hero {
-  min-height: 0 !important;
-  height: auto !important;
-  padding-bottom: 0 !important;
-}
 .wrapper-partner {
   padding-top: 2.25rem !important;
   padding-bottom: 2.75rem !important;
@@ -4079,8 +4080,8 @@ figure {
    Goal: show hero + Platforms & Technologies on open, without pulling
    "What We Build / Engineering Capabilities" into the first screen. */
 #hero .wrapper-hero {
-  height: 66vh !important;
-  min-height: 500px !important;
+  height: 100vh !important;
+  min-height: 720px !important;
   justify-content: center !important;
 }
 #hero .wrapper-text-hero {
@@ -4136,4 +4137,121 @@ figure {
     max-height: 3.2rem !important;
     max-width: 9.5rem !important;
   }
+}
+
+
+/* Logic Loop Systems v1.1.6 - ask form cleanup + slight logo alignment */
+.wrapper-navbar.logo {
+  position: relative !important;
+  left: 1rem !important;
+  transform: none !important;
+}
+
+.lls-chat-note {
+  display: none !important;
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper-navbar.logo {
+    left: -0.15rem !important;
+  }
+}  
+.wrapper-navbar.menu {
+  position: absolute;
+  left: 52%;
+  transform: translateX(-50%);
+}
+/* Hero headline size */
+#hero .text-hero {
+  font-size: 3.4vw !important;
+  line-height: 1.05 !important;
+}
+
+#hero .wrapper-text-hero {
+  width: 62vw !important;
+} 
+
+/* Restore mouse scroll animation */
+.lottie-scroll {
+  display: block !important;
+  width: 5vw !important;
+}
+
+/* Restore hero mouse scroll animation */
+#hero .wrapper-content-hero {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-bottom: 2rem !important;
+}
+
+#hero .lottie-scroll {
+  display: block !important;
+  width: 5vw !important;
+  min-width: 42px !important;
+  max-width: 72px !important;
+}
+/* Hide white horizontal divider after first page */
+#hero + .main-section .wrapper-border.vertical.v1 {
+  display: none !important;
+}
+
+/* Keep mouse scroll animation visible */
+#hero .wrapper-content-hero {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-bottom: 2rem !important;
+}
+
+#hero .lottie-scroll {
+  display: block !important;
+  width: 5vw !important;
+  min-width: 42px !important;
+  max-width: 72px !important;
+}
+
+/* Final hero + mouse + logo carousel balance */
+#hero .wrapper-hero {
+  height: 76vh !important;
+  min-height: 500px !important;
+  justify-content: space-between !important;
+}
+
+#hero .wrapper-text-hero {
+  padding-top: 6rem !important;
+  width: 62vw !important;
+  flex: 1 !important;
+}
+
+#hero .text-hero {
+  font-size: 3.4vw !important;
+  line-height: 1.05 !important;
+}
+
+#hero .wrapper-content-hero {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-bottom: 1.4rem !important;
+}
+
+#hero .lottie-scroll {
+  display: block !important;
+  width: 4.2vw !important;
+  min-width: 38px !important;
+  max-width: 64px !important;
+}
+
+#hero + .main-section {
+  margin-top: 0 !important;
+}
+
+#hero + .main-section .wrapper-partner {
+  padding-top: 1rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+#hero + .main-section .wrapper-border.vertical.v1 {
+  display: none !important;
 }

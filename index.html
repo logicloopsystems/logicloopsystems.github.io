@@ -84,17 +84,10 @@
 <a class="link-menu w-inline-block" href="index.html#integration">
 <div class="text-secondary menu v1">Integration</div>
 </a>
-</div>
-<a class="button-primary w-inline-block" data-w-id="09714e88-c4a4-13a4-326d-691aded0cd8b" href="contact.html">
-<div class="wrapper-button-primary">
-<div class="wrapper-button-primary-text">
-<div class="text-menu">Contact Us</div>
-</div>
-<div class="wrapper-button-primary-bg">
-<div class="bg-button-primary"></div>
-</div>
-</div>
+<a class="link-menu w-inline-block" href="contact.html">
+<div class="text-secondary menu v1">Contact Us</div>
 </a>
+</div>
 </div>
 <div class="navbar-mobile w-nav" data-animation="over-right" data-collapse="tiny" data-duration="400" data-easing="ease-in" data-easing2="ease-in-out" role="banner">
 <div class="w-container">
@@ -195,7 +188,7 @@
 <div class="wrapper-partner">
 <div class="title-partner">
 <div class="block-title-partner v1">
-<div class="small-text animation">Platforms and technologies used in recent industrial automation, robotics, and edge-computing work.</div>
+<div class="small-text animation">AUTONOMY & ROBOTICS</div>
 </div>
 <div class="block-title-partner v2">
 <div class="small-text secondary animation-loop">PLATFORMS & TECHNOLOGIES</div>
@@ -741,16 +734,6 @@
 <div class="cta-content">
 <div class="scramble v1">Discuss Your Machine Project</div>
 <div class="medium-big-text text-center">Ready to build a smarter machine<br/>workflow?</div>
-<a class="button-primary w-inline-block" data-w-id="c04e4694-4bf6-261b-b691-290718932b7c" href="contact.html">
-<div class="wrapper-button-primary">
-<div class="wrapper-button-primary-text">
-<div class="text-menu">Contact Us</div>
-</div>
-<div class="wrapper-button-primary-bg">
-<div class="bg-button-primary"></div>
-</div>
-</div>
-</a>
 </div>
 </div>
 <section class="main-section fixed">
@@ -842,8 +825,8 @@
     <div class="lls-chat-header">
       <img src="images/logicloop_icon_white.png" alt="Logic Loop Systems"/>
       <div>
-        <div class="lls-chat-title">How can we help?</div>
-        <div class="lls-chat-subtitle">Send a project question to Logic Loop Systems.</div>
+        <div class="lls-chat-title">Ask Logic Loop Systems</div>
+        <div class="lls-chat-subtitle">Have a project in mind? We'd love to hear about it.</div>
       </div>
     </div>
     <form class="lls-chat-body" id="llsChatForm">
@@ -851,6 +834,8 @@
       <input id="llsName" name="name" autocomplete="name" placeholder="Your name" required/>
       <label for="llsEmail">Email</label>
       <input id="llsEmail" name="email" type="email" autocomplete="email" placeholder="you@company.com" required/>
+      <label for="llsCompany">Company <span style="text-transform:none;letter-spacing:0;color:rgba(255,255,255,.45)">(optional)</span></label>
+      <input id="llsCompany" name="company" autocomplete="organization" placeholder="Company or organization"/>
       <label for="llsProject">Project type</label>
       <select id="llsProject" name="project_type">
         <option>Industrial automation</option>
@@ -867,7 +852,6 @@
         <button class="lls-chat-close" id="llsChatClose" type="button">Close</button>
       </div>
       <div class="lls-chat-status" id="llsChatStatus"></div>
-      <div class="lls-chat-note">This static version opens an email draft to logicloopsystems@gmail.com. It can be connected to Formspree, EmailJS, or a backend later for one-click sending.</div>
     </form>
   </div>
 </div>
@@ -1039,12 +1023,14 @@
       const data=new FormData(form);
       const name=(data.get('name')||'').toString().trim();
       const email=(data.get('email')||'').toString().trim();
+      const company=(data.get('company')||'').toString().trim();
       const project=(data.get('project_type')||'').toString().trim();
       const message=(data.get('message')||'').toString().trim();
       const subject='Website inquiry - '+(project||'Logic Loop Systems');
       const body=[
         'Name: '+name,
         'Email: '+email,
+        'Company: '+(company||'Not provided'),
         'Project type: '+project,
         '',
         'Message:',
@@ -1053,7 +1039,7 @@
         'Sent from logicloopsystems.com website chat widget.'
       ].join('\n');
       window.location.href='mailto:'+destination+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-      status.textContent='Opening your email app with the inquiry filled in.';
+      status.textContent='Opening your inquiry draft.';
     });
   })();
 </script>
