@@ -4255,3 +4255,15 @@ figure {
 #hero + .main-section .wrapper-border.vertical.v1 {
   display: none !important;
 }
+@media screen and (max-width: 991px) {
+  .brand-text {
+    display: inline-block !important;
+    font-size: 0.85rem !important;
+    line-height: 1.05 !important;
+  }
+
+  .logo-navbar {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+}
