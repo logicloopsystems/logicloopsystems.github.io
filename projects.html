@@ -286,4 +286,257 @@ a{
 <article class="card"><img src="images/icon-vision-ai.png" alt="Vision AI icon"><h2>Vision AI / Safety Applications</h2><p>Camera-based object detection, warning zones, collision mitigation logic, motion inhibit rules, and machine-state-aware safety outputs.</p><div class="tagrow"><span class="tag">Vision AI</span><span class="tag">Safety Logic</span><span class="tag">Collision Mitigation</span></div></article>
 <article class="card"><img src="images/icon-remote-control.png" alt="Remote control icon"><h2>Remote Control &amp; Semi-Autonomous Workflows</h2><p>Interfaces for teleoperation, operator command routing, safe-state handling, joystick command mapping, machine ownership, and semi-autonomous assist functions.</p><div class="tagrow"><span class="tag">Teleoperation</span><span class="tag">Safe State</span><span class="tag">Autonomy Assist</span></div></article>
 <article class="card"><img src="images/logicloop_icon_white.png" alt="Logic Loop icon"><h2>Project Delivery</h2><p>From bench simulation to machine deployment: requirements, interface contracts, code packages, diagnostics, commissioning support, and clean documentation.</p><div class="tagrow"><span class="tag">Prototype</span><span class="tag">Deploy</span><span class="tag">Support</span></div></article>
-</section></main><footer class="footer"><div>© 2026 Logic Loop Systems</div><div>Industrial automation • ROS 2 • Machine safety • Edge computing</div></footer><div class="lls-chat-widget"><a class="lls-chat-toggle" href="mailto:logicloopsystems@gmail.com?subject=Project%20Inquiry%20from%20Logic%20Loop%20Systems%20Website"><img src="images/logicloop_icon_white.png" alt=""/><span>Ask Logic Loop</span></a></div></body></html>
+</section></main><footer class="footer"><div>© 2026 Logic Loop Systems</div><div>Industrial automation • ROS 2 • Machine safety • Edge computing</div></footer>```html
+<!-- ========================= -->
+<!-- ASK LOGIC LOOP WIDGET -->
+<!-- Place before </body> -->
+<!-- ========================= -->
+
+<style>
+.lls-chat-widget{
+  position:fixed;
+  right:24px;
+  bottom:24px;
+  z-index:9999;
+  font-family:'Inter Tight',Arial,sans-serif;
+}
+
+.lls-chat-toggle{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  color:#fff;
+  border-radius:999px;
+  padding:12px 18px;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow:0 16px 42px rgba(0,0,0,.35);
+}
+
+.lls-chat-toggle img{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+}
+
+.lls-chat-panel{
+  position:absolute;
+  bottom:70px;
+  right:0;
+  width:380px;
+  max-width:92vw;
+
+  background:rgba(15,15,15,.92);
+  backdrop-filter:blur(20px);
+  -webkit-backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;
+
+  overflow:hidden;
+
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(10px);
+
+  transition:.25s ease;
+}
+
+.lls-chat-widget.open .lls-chat-panel{
+  opacity:1;
+  visibility:visible;
+  transform:translateY(0);
+}
+
+.lls-chat-header{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 18px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.lls-chat-header img{
+  width:38px;
+  height:38px;
+}
+
+.lls-chat-title{
+  font-weight:700;
+  font-size:16px;
+}
+
+.lls-chat-subtitle{
+  font-size:12px;
+  color:rgba(255,255,255,.65);
+}
+
+.lls-chat-close{
+  margin-left:auto;
+  background:none;
+  border:none;
+  color:#fff;
+  cursor:pointer;
+  font-size:22px;
+}
+
+.lls-chat-form{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  padding:18px;
+}
+
+.lls-chat-form input,
+.lls-chat-form select,
+.lls-chat-form textarea{
+  width:100%;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:12px;
+  background:rgba(255,255,255,.05);
+  color:#fff;
+  padding:12px;
+  font-size:14px;
+}
+
+.lls-chat-form textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+.lls-chat-form button{
+  border:none;
+  border-radius:12px;
+  background:#fff;
+  color:#000;
+  padding:12px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.lls-chat-status{
+  font-size:12px;
+  color:rgba(255,255,255,.65);
+}
+
+@media(max-width:600px){
+  .lls-chat-panel{
+    width:92vw;
+  }
+}
+</style>
+
+<div class="lls-chat-widget" id="llsChatWidget">
+
+  <button class="lls-chat-toggle" id="llsChatToggle" type="button">
+    <img src="images/logicloop_icon_white.png" alt="">
+    <span>Ask Logic Loop</span>
+  </button>
+
+  <div class="lls-chat-panel">
+
+    <div class="lls-chat-header">
+      <img src="images/logicloop_icon_white.png" alt="">
+      <div>
+        <div class="lls-chat-title">Ask Logic Loop</div>
+        <div class="lls-chat-subtitle">
+          Machine Integration • ROS 2 • Vision AI • CAN
+        </div>
+      </div>
+
+      <button class="lls-chat-close" id="llsChatClose">×</button>
+    </div>
+
+    <form class="lls-chat-form" id="llsChatForm">
+
+      <input name="name" placeholder="Your Name" required>
+
+      <input
+        name="email"
+        type="email"
+        placeholder="Email Address"
+        required>
+
+      <input
+        name="company"
+        placeholder="Company (Optional)">
+
+      <select name="project">
+        <option>Machine Integration</option>
+        <option>ROS 2 Development</option>
+        <option>Vision AI</option>
+        <option>CAN / J1939</option>
+        <option>Remote Control</option>
+        <option>Other</option>
+      </select>
+
+      <textarea
+        name="message"
+        placeholder="Tell us about your project..."
+        required></textarea>
+
+      <button type="submit">
+        Create Email Draft
+      </button>
+
+      <div class="lls-chat-status" id="llsChatStatus"></div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+(function(){
+
+const widget=document.getElementById('llsChatWidget');
+const toggle=document.getElementById('llsChatToggle');
+const close=document.getElementById('llsChatClose');
+const form=document.getElementById('llsChatForm');
+const status=document.getElementById('llsChatStatus');
+
+toggle.addEventListener('click',()=>{
+  widget.classList.toggle('open');
+});
+
+close.addEventListener('click',()=>{
+  widget.classList.remove('open');
+});
+
+form.addEventListener('submit',function(e){
+
+  e.preventDefault();
+
+  const fd=new FormData(form);
+
+  const subject=
+    'Website Inquiry - '+
+    (fd.get('project')||'');
+
+  const body=
+`Name: ${fd.get('name')}
+Email: ${fd.get('email')}
+Company: ${fd.get('company')}
+
+Project Type:
+${fd.get('project')}
+
+Message:
+${fd.get('message')}`;
+
+  window.location.href=
+    'mailto:logicloopsystems@gmail.com'
+    +'?subject='+encodeURIComponent(subject)
+    +'&body='+encodeURIComponent(body);
+
+  status.textContent='Opening email draft...';
+
+});
+
+})();
+</script>
+```
+</body></html>
