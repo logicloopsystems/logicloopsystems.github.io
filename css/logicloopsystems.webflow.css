@@ -2176,9 +2176,17 @@ figure {
 }
 
 .wrapper-made-by-footer {
-  justify-content: space-between;
-  align-items: flex-end;
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.wrapper-block-made-by {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
 }
 
 .block-made-by {
@@ -3477,14 +3485,19 @@ figure {
     align-items: center;
   }
 
-  .wrapper-made-by-footer {
-    grid-column-gap: var(--gap--gap-8x);
-    grid-row-gap: var(--gap--gap-8x);
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
+ .wrapper-made-by-footer {
+   grid-column-gap: 12px;
+   grid-row-gap: 12px;
+   flex-flow: row;
+   justify-content: flex-start;
+   align-items: center;
+ }
+ .wrapper-block-made-by {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   gap: 16px;
+ }
   .block-made-by {
     grid-column-gap: var(--gap--gap-1x);
     grid-row-gap: var(--gap--gap-1x);
