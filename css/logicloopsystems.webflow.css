@@ -2176,17 +2176,9 @@ figure {
 }
 
 .wrapper-made-by-footer {
+  justify-content: space-between;
+  align-items: flex-end;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
-}
-
-.wrapper-block-made-by {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
 }
 
 .block-made-by {
@@ -3485,19 +3477,14 @@ figure {
     align-items: center;
   }
 
- .wrapper-made-by-footer {
-   grid-column-gap: 12px;
-   grid-row-gap: 12px;
-   flex-flow: row;
-   justify-content: flex-start;
-   align-items: center;
- }
- .wrapper-block-made-by {
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-   gap: 16px;
- }
+  .wrapper-made-by-footer {
+    grid-column-gap: var(--gap--gap-8x);
+    grid-row-gap: var(--gap--gap-8x);
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
   .block-made-by {
     grid-column-gap: var(--gap--gap-1x);
     grid-row-gap: var(--gap--gap-1x);
@@ -4286,4 +4273,581 @@ figure {
 
 .lls-chat-header {
   background: var(--color--almost-black-2) !important;
+}
+
+
+/* Logic Loop Systems v1.5.0 - unified menu + homepage content sections */
+html { scroll-behavior: smooth; }
+.lls-info-section{
+  background:#000;
+  padding:7rem var(--layout--container-spacing);
+  position:relative;
+  z-index:2;
+}
+.lls-info-section.compact{ padding-top:5.5rem; padding-bottom:6rem; }
+.lls-info-wrap{
+  max-width:1120px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:1.25rem;
+}
+.lls-eyebrow{
+  color:rgba(255,255,255,.58);
+  font-family:var(--font-type--secondary-font);
+  font-size:.9rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.lls-info-wrap h2{
+  margin:0;
+  max-width:920px;
+  font-size:clamp(2.1rem,4.4vw,5.6rem);
+  line-height:.98;
+  letter-spacing:-.045em;
+  font-weight:300;
+}
+.lls-info-wrap p{
+  max-width:920px;
+  color:rgba(255,255,255,.70);
+  font-size:clamp(1rem,1.35vw,1.35rem);
+  line-height:1.6;
+}
+.lls-info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1.4rem;
+}
+.lls-info-grid > div{
+  min-height:150px;
+  padding:1.35rem;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:1.25rem;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+.lls-info-grid strong{
+  display:block;
+  color:#fff;
+  font-size:1.05rem;
+  margin-bottom:.65rem;
+}
+.lls-info-grid span{
+  display:block;
+  color:rgba(255,255,255,.65);
+  line-height:1.5;
+  font-size:.95rem;
+}
+.wrapper-navbar.menu .wrapper-link-navbar{ gap:1.25rem !important; }
+.text-secondary.menu.v1{ white-space:nowrap; }
+.wrapper-made-by-footer{
+  justify-content:flex-start !important;
+  align-items:center !important;
+  gap:18px !important;
+}
+.wrapper-block-made-by{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  gap:20px !important;
+}
+@media screen and (max-width:991px){
+  .lls-info-section{ padding:5rem 1.5rem; }
+  .lls-info-grid{ grid-template-columns:1fr; }
+  .wrapper-made-by-footer{ flex-flow:row !important; justify-content:flex-start !important; align-items:center !important; gap:12px !important; }
+  .wrapper-block-made-by{ flex-direction:column !important; align-items:flex-start !important; gap:6px !important; }
+}
+
+/* Logic Loop Systems v1.5.2 - restore v1.4 footer behavior and remove delayed custom scroll */
+/* Do not force custom smooth scrolling here; let Webflow/browser handle anchors without delay. */
+html{
+  scroll-behavior:auto !important;
+  scroll-padding-top:0 !important;
+}
+
+/* Restore original Webflow footer behavior from v1.4 so footer does not appear between sections. */
+.main-section.fixed{
+  z-index:1 !important;
+  position:fixed !important;
+  inset:auto 0% 0% !important;
+}
+.wrapper-footer{
+  height:85vh !important;
+  min-height:0 !important;
+  display:flex !important;
+  position:relative !important;
+}
+
+/* Keep footer logo and Built by / Focused on text grouped together on the left. */
+.wrapper-made-by-footer{
+  display:flex !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  gap:18px !important;
+}
+.wrapper-block-made-by{
+  display:flex !important;
+  flex-direction:row !important;
+  align-items:center !important;
+  gap:20px !important;
+}
+
+@media screen and (max-width:991px){
+  .wrapper-made-by-footer{
+    flex-flow:row !important;
+    justify-content:flex-start !important;
+    align-items:center !important;
+    gap:12px !important;
+  }
+  .wrapper-block-made-by{
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:5px !important;
+  }
+}
+
+
+/* Logic Loop Systems v1.6.0 - about section polish + back-to-home shortcut */
+.lls-home-content{
+  background:#000;
+  padding:7rem var(--layout--container-spacing);
+  position:relative;
+  z-index:2;
+}
+.lls-content-wrap{
+  max-width:1180px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:1.25rem;
+}
+.lls-section-title{
+  margin:0;
+  max-width:980px;
+  font-size:clamp(2.1rem,4.4vw,5.6rem);
+  line-height:.98;
+  letter-spacing:-.045em;
+  font-weight:300;
+}
+.lls-section-lead{
+  max-width:980px;
+  color:rgba(255,255,255,.70);
+  font-size:clamp(1rem,1.35vw,1.35rem);
+  line-height:1.6;
+}
+.lls-content-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1rem;
+  margin-top:1.4rem;
+}
+.lls-info-card{
+  min-height:185px;
+  padding:1.35rem;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:1.25rem;
+  background:linear-gradient(180deg,rgba(255,255,255,.055),rgba(255,255,255,.025));
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+}
+.lls-info-card h3{
+  color:#fff;
+  font-size:1.25rem;
+  margin:0 0 .75rem;
+  font-weight:600;
+}
+.lls-info-card p{
+  color:rgba(255,255,255,.65);
+  line-height:1.55;
+  font-size:.98rem;
+  margin:0;
+}
+.lls-mini-list{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:.75rem;
+  margin-top:1.2rem;
+}
+.lls-mini-list div{
+  padding:.85rem 1rem;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:999px;
+  background:rgba(255,255,255,.035);
+  color:rgba(255,255,255,.78);
+  text-align:center;
+  font-size:.92rem;
+}
+.back-to-top{
+  position:fixed;
+  right:24px;
+  bottom:100px;
+  z-index:9998;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  text-decoration:none;
+  font-size:22px;
+  line-height:1;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 14px 36px rgba(0,0,0,.35);
+  transition:background .2s ease, transform .2s ease;
+}
+.back-to-top:hover{
+  background:rgba(255,255,255,.15);
+  transform:translateY(-2px);
+}
+@media screen and (max-width:991px){
+  .lls-home-content{ padding:5rem 1.5rem; }
+  .lls-content-grid{ grid-template-columns:1fr; }
+  .lls-mini-list{ grid-template-columns:1fr; }
+  .back-to-top{ right:18px; bottom:92px; width:42px; height:42px; }
+}
+
+
+/* Logic Loop Systems v1.6.1 - section labels + about full-height fix */
+.lls-home-content{
+  min-height:100vh !important;
+  display:flex !important;
+  align-items:center !important;
+}
+.lls-home-content .lls-content-wrap{
+  width:100%;
+}
+@media screen and (max-width:991px){
+  .lls-home-content{
+    min-height:auto !important;
+    display:block !important;
+    padding-top:5.5rem !important;
+    padding-bottom:6.5rem !important;
+  }
+}
+
+
+/* Logic Loop Systems v1.6.2 - section anchor positioning + footer visibility fix */
+/* Keep anchor targets higher and consistent when using the menu. */
+#about,
+#product,
+#services,
+#projects,
+#lab,
+#workflow,
+#integration,
+#contact{
+  scroll-margin-top: 1.25rem !important;
+}
+
+/* Compact the About section so the full content fits better in one viewport. */
+.lls-home-content{
+  min-height:100vh !important;
+  display:flex !important;
+  align-items:flex-start !important;
+  padding-top:4.25rem !important;
+  padding-bottom:3.75rem !important;
+  background:#000 !important;
+  z-index:5 !important;
+  overflow:hidden !important;
+}
+.lls-home-content .lls-content-wrap{
+  width:100% !important;
+  gap:.9rem !important;
+}
+.lls-home-content .lls-section-title{
+  font-size:clamp(1.9rem,3.8vw,4.6rem) !important;
+  line-height:1 !important;
+}
+.lls-home-content .lls-section-lead{
+  font-size:clamp(.95rem,1.1vw,1.15rem) !important;
+  line-height:1.5 !important;
+  margin-top:.25rem !important;
+}
+.lls-home-content .lls-content-grid{
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:.85rem !important;
+  margin-top:.75rem !important;
+}
+.lls-home-content .lls-info-card{
+  min-height:0 !important;
+  padding:1rem !important;
+}
+.lls-home-content .lls-info-card h3{
+  font-size:1.05rem !important;
+  margin-bottom:.5rem !important;
+}
+.lls-home-content .lls-info-card p{
+  font-size:.88rem !important;
+  line-height:1.45 !important;
+}
+.lls-home-content .lls-mini-list{
+  margin-top:.65rem !important;
+  gap:.55rem !important;
+}
+.lls-home-content .lls-mini-list div{
+  padding:.65rem .8rem !important;
+  font-size:.82rem !important;
+}
+
+/* Make any added section label sit cleanly at the upper left of sticky sections. */
+.lls-section-floating-label{
+  position:absolute;
+  top:2.25rem;
+  left:var(--layout--container-spacing);
+  z-index:6;
+}
+.tracks.lab .wrapper-padding,
+.tracks.workflow .wrapper-padding,
+.tracks.integration .wrapper-padding{
+  position:relative;
+}
+
+/* Stop the footer from showing through while scrolling between homepage sections. */
+.main-section.fixed{
+  position:relative !important;
+  inset:auto !important;
+  z-index:5 !important;
+  background:#000 !important;
+}
+.wrapper-footer{
+  height:auto !important;
+  min-height:55vh !important;
+  background:#000 !important;
+}
+.block-footer{
+  background:var(--color--almost-black) !important;
+}
+
+@media screen and (max-width:1200px){
+  .lls-home-content .lls-content-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .lls-home-content{
+    overflow:visible !important;
+  }
+}
+@media screen and (max-width:991px){
+  #about,#product,#services,#projects,#lab,#workflow,#integration,#contact{
+    scroll-margin-top: .75rem !important;
+  }
+  .lls-home-content{
+    min-height:auto !important;
+    display:block !important;
+    padding-top:4.5rem !important;
+    padding-bottom:5rem !important;
+  }
+  .lls-home-content .lls-content-grid{
+    grid-template-columns:1fr !important;
+  }
+  .lls-section-floating-label{
+    position:relative;
+    top:auto;
+    left:auto;
+    margin-bottom:1rem;
+  }
+}
+
+/* Logic Loop Systems v1.6.3 - section sizing balance
+   - About and Projects enlarged slightly now that there is room
+   - Services compacted/scaled so it fits cleanly in one viewport */
+
+/* Keep anchor landings high but not under the navbar. */
+#about,
+#projects,
+#services{
+  scroll-margin-top: .75rem !important;
+}
+
+/* ABOUT: restore a little more visual weight while keeping one-page fit. */
+#about.lls-home-content{
+  padding-top: 4.85rem !important;
+  padding-bottom: 4.4rem !important;
+}
+#about.lls-home-content .lls-content-wrap{
+  gap: 1.05rem !important;
+  max-width: 1240px !important;
+}
+#about.lls-home-content .lls-section-title{
+  font-size: clamp(2.25rem,4.15vw,5.05rem) !important;
+  line-height: .98 !important;
+}
+#about.lls-home-content .lls-section-lead{
+  font-size: clamp(1rem,1.22vw,1.26rem) !important;
+  line-height: 1.55 !important;
+  max-width: 1040px !important;
+}
+#about.lls-home-content .lls-content-grid{
+  gap: 1rem !important;
+  margin-top: 1rem !important;
+}
+#about.lls-home-content .lls-info-card{
+  padding: 1.18rem !important;
+}
+#about.lls-home-content .lls-info-card h3{
+  font-size: 1.12rem !important;
+}
+#about.lls-home-content .lls-info-card p{
+  font-size: .93rem !important;
+  line-height: 1.5 !important;
+}
+#about.lls-home-content .lls-mini-list div{
+  padding: .72rem .9rem !important;
+  font-size: .87rem !important;
+}
+
+/* PROJECTS: make the overview fill the page more confidently. */
+#projects.lls-info-section.compact{
+  min-height: 100vh !important;
+  display: flex !important;
+  align-items: center !important;
+  padding-top: 4.8rem !important;
+  padding-bottom: 4.4rem !important;
+  background: #000 !important;
+}
+#projects .lls-info-wrap{
+  max-width: 1240px !important;
+  gap: 1.15rem !important;
+}
+#projects .lls-info-wrap h2{
+  font-size: clamp(2.35rem,4.5vw,5.25rem) !important;
+  line-height: .98 !important;
+  max-width: 1080px !important;
+}
+#projects .lls-info-wrap p{
+  font-size: clamp(1rem,1.28vw,1.3rem) !important;
+  line-height: 1.55 !important;
+  max-width: 1040px !important;
+}
+#projects .lls-info-grid{
+  gap: 1.15rem !important;
+  margin-top: 1rem !important;
+}
+#projects .lls-info-grid > div{
+  min-height: 185px !important;
+  padding: 1.45rem !important;
+}
+#projects .lls-info-grid strong{
+  font-size: 1.15rem !important;
+}
+#projects .lls-info-grid span{
+  font-size: 1rem !important;
+  line-height: 1.55 !important;
+}
+
+/* SERVICES: compact and align so the full service cards fit in a single view. */
+#services.main-section.pricing{
+  min-height: 100vh !important;
+  background: #000 !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  overflow: hidden !important;
+}
+#services .main-container,
+#services .wrapper-padding{
+  width: 100% !important;
+  height: auto !important;
+}
+#services .wrapper-pricing{
+  padding-top: 3.2rem !important;
+  padding-bottom: 2.2rem !important;
+  gap: 1.05rem !important;
+  grid-row-gap: 1.05rem !important;
+}
+#services .title-pricing{
+  gap: .25rem !important;
+  grid-row-gap: .25rem !important;
+  align-items: center !important;
+}
+#services .wrapper-scramble-product{
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+}
+#services .medium-big-text{
+  font-size: clamp(1.75rem,3.05vw,3.55rem) !important;
+  line-height: 1.02 !important;
+}
+#services .content-pricing{
+  gap: 1rem !important;
+  grid-column-gap: 1rem !important;
+  grid-row-gap: 1rem !important;
+  align-items: stretch !important;
+}
+#services .title-card-pricing{
+  padding-top: .85rem !important;
+  padding-bottom: .85rem !important;
+}
+#services .title-card-pricing .medium-text{
+  font-size: clamp(1rem,1.35vw,1.35rem) !important;
+  line-height: 1.2 !important;
+}
+#services .body-card-pricing{
+  padding: .9rem !important;
+  gap: .72rem !important;
+  grid-row-gap: .72rem !important;
+}
+#services .block-price-card{
+  gap: .55rem !important;
+  grid-column-gap: .55rem !important;
+  align-items: baseline !important;
+}
+#services .large-text{
+  font-size: clamp(2rem,3.25vw,3.85rem) !important;
+  line-height: .95 !important;
+}
+#services .small-text,
+#services .text-secondary,
+#services .list{
+  font-size: .86rem !important;
+  line-height: 1.3 !important;
+}
+#services .list{
+  gap: .32rem !important;
+  grid-row-gap: .32rem !important;
+  padding-left: 1rem !important;
+}
+#services .wrapper-button-secondary{
+  padding: .55rem .75rem !important;
+}
+#services .scramble.secondary{
+  font-size: .78rem !important;
+  line-height: 1.1 !important;
+}
+
+@media screen and (max-width: 1200px){
+  #about.lls-home-content .lls-content-grid{
+    grid-template-columns: repeat(2,minmax(0,1fr)) !important;
+  }
+  #services.main-section.pricing{
+    overflow: visible !important;
+  }
+  #services .content-pricing{
+    flex-direction: column !important;
+  }
+  #services .block-card-pricing.v2{
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 991px){
+  #about.lls-home-content,
+  #projects.lls-info-section.compact,
+  #services.main-section.pricing{
+    min-height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+    padding-top: 4.5rem !important;
+    padding-bottom: 4.5rem !important;
+  }
+  #projects .lls-info-grid{
+    grid-template-columns: 1fr !important;
+  }
+  #services .wrapper-pricing{
+    padding-top: 0 !important;
+  }
 }

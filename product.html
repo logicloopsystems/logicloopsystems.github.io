@@ -1,362 +1,40 @@
-<!DOCTYPE html><html data-wf-page="lls-page" data-wf-site="lls" lang="en"><head><meta charset="utf-8"/><title>Product | Logic Loop Systems</title><meta content="width=device-width, initial-scale=1" name="viewport"/><meta name="description" content="Logic Loop Systems product concepts for machine gateway software, ROS 2 interfaces, CAN/J1939 connectivity, Vision AI safety inputs, and edge computer runtime support."/><meta property="og:title" content="Product | Logic Loop Systems"/><meta property="og:description" content="Logic Loop Systems product concepts for machine gateway software, ROS 2 interfaces, CAN/J1939 connectivity, Vision AI safety inputs, and edge computer runtime support."/><meta property="og:type" content="website"/><link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><link href="css/normalize.css" rel="stylesheet"/><link href="css/webflow.css" rel="stylesheet"/><link href="css/logicloopsystems.webflow.css" rel="stylesheet"/><style>
-:root{
-  --bg:#000000;
-  --panel:#101010;
-  --panel2:#161616;
-  --muted:rgba(255,255,255,.72);
-  --line:rgba(255,255,255,.12);
-  --accent:#ffffff;
-}
-
-*{
-  box-sizing:border-box;
-}
-
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 20% 0%,rgba(255,255,255,.07),transparent 34%),
-    radial-gradient(circle at 85% 20%,rgba(255,255,255,.04),transparent 30%),
-    linear-gradient(180deg,#030303,#0b0b0b 55%,#030303);
-  color:#fff;
-  font-family:'Inter Tight',Arial,sans-serif;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* NAVBAR */
-
-.page-nav{
-  position:sticky;
-  top:0;
-  z-index:50;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:24px;
-  padding:18px 7vw;
-  background:rgba(10,10,10,.52);
-  backdrop-filter:blur(22px);
-  -webkit-backdrop-filter:blur(22px);
-  border-bottom:1px solid var(--line);
-}
-
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  font-weight:800;
-  font-size:22px;
-}
-
-.brand img{
-  width:62px;
-  height:62px;
-  object-fit:contain;
-}
-
-.nav-links{
-  display:flex;
-  gap:24px;
-  align-items:center;
-  font-size:18px;
-}
-
-.nav-cta{
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:12px 18px;
-  background:rgba(255,255,255,.10);
-  color:#fff;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-  font-weight:800;
-}
-
-/* HERO */
-
-.hero{
-  padding:100px 7vw 48px;
-  max-width:1280px;
-  margin:auto;
-}
-
-.eyebrow{
-  letter-spacing:.18em;
-  text-transform:uppercase;
-  color:#bdbdbd;
-  font-size:13px;
-  font-weight:800;
-}
-
-.hero h1{
-  font-size:clamp(44px,7vw,96px);
-  line-height:.95;
-  margin:18px 0;
-  letter-spacing:-.05em;
-}
-
-.hero p{
-  font-size:clamp(18px,2vw,24px);
-  color:var(--muted);
-  line-height:1.5;
-  max-width:920px;
-}
-
-/* CARDS */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  max-width:1280px;
-  margin:28px auto;
-  padding:0 7vw 80px;
-}
-
-.card{
-  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));
-  backdrop-filter:blur(18px);
-  -webkit-backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:28px;
-  padding:28px;
-  min-height:260px;
-  box-shadow:0 18px 60px rgba(0,0,0,.30), inset 0 1px 0 rgba(255,255,255,.08);
-  transition:all .25s ease;
-}
-
-.card:hover{
-  transform:translateY(-6px);
-  background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.045));
-  border-color:rgba(255,255,255,.24);
-  box-shadow:0 24px 75px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.12);
-}
-
-.card img{
-  width:54px;
-  height:54px;
-  object-fit:contain;
-  margin-bottom:18px;
-}
-
-.card h2,
-.card h3{
-  font-size:26px;
-  margin:0 0 12px;
-  letter-spacing:-.02em;
-}
-
-.card p{
-  color:var(--muted);
-  line-height:1.55;
-  font-size:16px;
-  margin:0;
-}
-
-.tagrow{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-  margin-top:18px;
-}
-
-.tag{
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:8px 12px;
-  color:rgba(255,255,255,.78);
-  font-size:13px;
-  background:rgba(255,255,255,.03);
-}
-
-/* SECTIONS */
-
-.section{
-  max-width:1280px;
-  margin:0 auto;
-  padding:40px 7vw 90px;
-}
-
-.section h2{
-  font-size:clamp(34px,5vw,64px);
-  letter-spacing:-.04em;
-  margin:0 0 18px;
-}
-
-.section p{
-  font-size:18px;
-  line-height:1.55;
-  color:var(--muted);
-  max-width:880px;
-}
-
-.list{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-  margin-top:24px;
-}
-
-.list div{
-  padding:18px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:rgba(255,255,255,.03);
-  color:rgba(255,255,255,.82);
-}
-
-/* FOOTER */
-
-.footer{
-  padding:42px 7vw;
-  border-top:1px solid var(--line);
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  color:var(--muted);
-  background:#000;
-}
-
-/* ASK LOGIC LOOP */
-
-.lls-chat-widget{
-  position:fixed;
-  right:24px;
-  bottom:24px;
-  z-index:9999;
-  font-family:'Inter Tight',Arial,sans-serif;
-}
-
-.lls-chat-toggle{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  border:1px solid rgba(255,255,255,.18);
-  background:#141414;
-  color:#fff;
-  border-radius:999px;
-  padding:12px 18px;
-  box-shadow:0 12px 32px rgba(0,0,0,.35);
-  cursor:pointer;
-  font-weight:700;
-  font-size:15px;
-}
-
-.lls-chat-toggle:hover{
-  background:#1d1d1d;
-}
-
-.lls-chat-toggle img{
-  width:28px;
-  height:28px;
-  object-fit:contain;
-  background:transparent;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .brand img{
-    width:48px;
-    height:48px;
-  }
-
-  .list{
-    grid-template-columns:1fr;
-  }
-
-  .footer{
-    flex-direction:column;
-  }
-
-  .hero{
-    padding-top:70px;
-  }
-}
-</style></head><body><header class="page-nav"><a class="brand" href="index.html#hero"><img src="images/logicloop_icon_white.png" alt="Logic Loop Systems icon"/><span>Logic Loop Systems</span></a><nav class="nav-links"><a href="product.html">Product</a><a href="services.html">Services</a><a href="projects.html">Projects</a><a href="integration.html">Integration</a><a class="nav-cta" href="contact.html">Contact Us</a></nav></header><main><section class="hero"><div class="eyebrow">Product</div><h1>A practical machine gateway foundation for industrial automation.</h1><p>Logic Loop Systems builds reusable product foundations for machine connectivity, edge control, ROS 2 integration, CAN/J1939 communication, Vision AI safety inputs, and operator workflow support.</p></section><section class="grid"><article class="card"><img src="images/logicloop_icon_white.png" alt="Logic Loop icon"><h2>Logic Loop Machine Gateway</h2><p>A practical edge software layer for connecting machine signals, operator commands, diagnostics, and automation workflows into one reliable interface.</p><div class="tagrow"><span class="tag">Machine Gateway</span><span class="tag">Edge Logic</span><span class="tag">Field Ready</span></div></article><article class="card"><img src="images/tech-ros2.png" alt="ROS 2 icon"><h2>ROS 2 Interface Layer</h2><p>Structured topics, message contracts, launch files, status publishing, and gateway nodes for machine automation applications.</p><div class="tagrow"><span class="tag">ROS 2</span><span class="tag">Topics</span><span class="tag">Interfaces</span></div></article><article class="card"><img src="images/icon-can.png" alt="CAN icon"><h2>CAN / J1939 Connectivity</h2><p>Command translation, status decoding, heartbeat checks, safe-state handling, and machine network bridging.</p><div class="tagrow"><span class="tag">CAN</span><span class="tag">J1939</span><span class="tag">SocketCAN</span></div></article><article class="card"><img src="images/icon-vision-ai.png" alt="Vision AI icon"><h2>Vision Safety Inputs</h2><p>Camera zones, warning states, collision logic, and machine-state-aware outputs for safety-focused workflows.</p><div class="tagrow"><span class="tag">Vision AI</span><span class="tag">Zones</span><span class="tag">Safety Logic</span></div></article><article class="card"><img src="images/tech-onlogic.svg" alt="Edge computer icon"><h2>Edge Computer Runtime</h2><p>Startup services, logging, network configuration, health checks, and deployment support for rugged edge computers.</p><div class="tagrow"><span class="tag">OnLogic</span><span class="tag">NVIDIA</span><span class="tag">Ubuntu</span></div></article><article class="card"><img src="images/icon-remote-control.png" alt="Remote control icon"><h2>Operator Workflow Support</h2><p>Remote control, semi-autonomous assist, command ownership, and safe handover behavior for industrial machines.</p><div class="tagrow"><span class="tag">Remote Control</span><span class="tag">Assist</span><span class="tag">Ownership</span></div></article></section><section class="section"><h2>What the product foundation supports</h2><p>The product direction is focused on dependable field integration: clear interfaces, safe defaults, useful diagnostics, and deployment patterns that can be adapted across machines.</p><div class="list"><div>Machine command and status abstraction</div><div>ROS 2 topic and message contracts</div><div>CAN/J1939 bridge and decoding logic</div><div>Safe-state and timeout behavior</div><div>Edge computer startup, logging, and health checks</div><div>Camera zone and warning-state integration</div></div></section></main><footer class="footer"><div>© 2026 Logic Loop Systems</div><div></div></footer>
-<!-- ASK LOGIC LOOP WIDGET -->
-<style>
-.lls-chat-widget{position:fixed;right:24px;bottom:24px;z-index:9999;font-family:'Inter Tight',Arial,sans-serif}
-.lls-chat-toggle{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.08);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:#fff;border-radius:999px;padding:12px 18px;cursor:pointer;font-weight:700;box-shadow:0 16px 42px rgba(0,0,0,.35)}
-.lls-chat-toggle img{width:28px;height:28px;object-fit:contain;background:transparent}
-.lls-chat-panel{position:absolute;bottom:70px;right:0;width:380px;max-width:92vw;background:rgba(15,15,15,.94);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.12);border-radius:24px;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s ease;color:#fff}
-.lls-chat-widget.open .lls-chat-panel{opacity:1;visibility:visible;transform:translateY(0)}
-.lls-chat-header{display:flex;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035)}
-.lls-chat-header img{width:38px;height:38px;object-fit:contain;background:transparent}
-.lls-chat-title{font-weight:700;font-size:16px;line-height:1.2}
-.lls-chat-subtitle{font-size:12px;color:rgba(255,255,255,.65);line-height:1.35;margin-top:2px}
-.lls-chat-close{margin-left:auto;background:none;border:none;color:#fff;cursor:pointer;font-size:22px;line-height:1;padding:4px}
-.lls-chat-form{display:flex;flex-direction:column;gap:10px;padding:18px}
-.lls-chat-form input,.lls-chat-form select,.lls-chat-form textarea{width:100%;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.05);color:#fff;padding:12px;font-size:14px;font-family:'Inter Tight',Arial,sans-serif}
-.lls-chat-form select option{background:#111;color:#fff}
-.lls-chat-form textarea{min-height:120px;resize:vertical}
-.lls-chat-form button{border:none;border-radius:12px;background:#fff;color:#000;padding:12px;font-weight:700;cursor:pointer;font-family:'Inter Tight',Arial,sans-serif}
-.lls-chat-status{font-size:12px;color:rgba(255,255,255,.65);min-height:14px}
-@media(max-width:600px){.lls-chat-widget{right:16px;bottom:16px}.lls-chat-panel{width:92vw}}
-</style>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><title>Product | Logic Loop Systems</title><meta name="viewport" content="width=device-width, initial-scale=1"/><link href="images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/><style>:root{--bg:#000;--panel:rgba(255,255,255,.055);--muted:rgba(255,255,255,.72);--line:rgba(255,255,255,.14)}*{box-sizing:border-box}body{margin:0;color:#fff;font-family:'Inter Tight',Arial,sans-serif;background:radial-gradient(circle at 20% 0%,rgba(255,255,255,.07),transparent 34%),linear-gradient(180deg,#030303,#0b0b0b 55%,#030303)}a{color:inherit;text-decoration:none}.page-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 7vw;background:rgba(10,10,10,.52);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-bottom:1px solid rgba(255,255,255,.10)}.brand{display:flex;align-items:center;gap:14px;font-weight:800;font-size:22px}.brand img{width:62px;height:62px;object-fit:contain}.nav-links{display:flex;gap:18px;align-items:center;font-size:16px;flex-wrap:wrap;justify-content:flex-end}.nav-cta{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:12px 18px;background:rgba(255,255,255,.10);color:#fff;font-weight:800}.hero{padding:100px 7vw 48px;max-width:1280px;margin:auto}.eyebrow{letter-spacing:.18em;text-transform:uppercase;color:#cfcfcf;font-size:13px;font-weight:800}.scramble{font-family:'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#cfcfcf;font-size:13px;font-weight:800}.hero h1{font-size:clamp(44px,7vw,96px);line-height:.95;margin:18px 0;letter-spacing:-.05em}.hero p{font-size:clamp(18px,2vw,24px);color:var(--muted);line-height:1.5;max-width:920px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1280px;margin:28px auto;padding:0 7vw 80px}.card{background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.035));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.12);border-radius:28px;padding:28px;min-height:220px;box-shadow:0 18px 60px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.08)}.card h2{font-size:26px;margin:0 0 12px}.card p{color:var(--muted);line-height:1.55;font-size:16px}.footer{padding:42px 7vw;border-top:1px solid rgba(255,255,255,.10);display:flex;justify-content:space-between;gap:20px;color:var(--muted);background:rgba(0,0,0,.55)}@media(max-width:900px){.grid{grid-template-columns:1fr}.nav-links{display:none}.brand img{width:48px;height:48px}.footer{flex-direction:column}.hero{padding-top:70px}}</style></head><body><header class="page-nav"><a class="brand" href="index.html#hero"><img src="images/logicloop_icon_white.png" alt="Logic Loop Systems icon"/><span>Logic Loop Systems</span></a><nav class="nav-links"><a href="index.html#about">About</a><a href="index.html#product">Product</a><a href="index.html#services">Services</a><a href="index.html#projects">Projects</a><a href="index.html#lab">Lab</a><a href="index.html#workflow">Workflow</a><a href="index.html#integration">Integration</a><a href="index.html#contact">Contact</a></nav></header><main><section class="hero"><div class="scramble v1">PRODUCTS</div><h1>A practical automation platform for connected machines.</h1><p>Logic Loop Systems connects machine signals, edge computers, ROS 2, CAN/J1939, vision systems, and operator workflows into reliable automation logic.</p></section><section class="grid"><article class="card"><h2>Machine Interfaces</h2><p>Connect controls, CAN/J1939, displays, and diagnostic signals.</p></article><article class="card"><h2>Edge Runtime</h2><p>Run gateway services, logging, monitoring, and field recovery on rugged computers.</p></article><article class="card"><h2>Automation Logic</h2><p>Apply machine-state-aware decisions, warnings, inhibits, and workflow logic.</p></article></section></main><footer class="footer"><div>© 2026 Logic Loop Systems</div><div>Industrial automation • ROS 2 • Machine safety • Edge computing</div></footer>
 <div class="lls-chat-widget" id="llsChatWidget">
-  <button class="lls-chat-toggle" id="llsChatToggle" type="button" aria-expanded="false">
-    <img src="images/logicloop_icon_white.png" alt=""><span>Ask Logic Loop</span>
-  </button>
+  <button class="lls-chat-toggle" id="llsChatToggle" type="button"><img src="images/logicloop_icon_white.png" alt=""/><span>Ask Logic Loop</span></button>
   <div class="lls-chat-panel">
-    <div class="lls-chat-header">
-      <img src="images/logicloop_icon_white.png" alt="">
-      <div><div class="lls-chat-title">Ask Logic Loop</div><div class="lls-chat-subtitle">Machine Integration<br>ROS 2 • Vision AI • CAN / J1939</div></div>
-      <button class="lls-chat-close" id="llsChatClose" type="button" aria-label="Close">×</button>
-    </div>
-    <form class="lls-chat-form" id="llsChatForm">
-      <input name="name" placeholder="Your Name" required>
-      <input name="email" type="email" placeholder="Email Address" required>
-      <input name="company" placeholder="Company (Optional)">
-      <select name="project" required>
-        <option value="">Project type</option>
-        <option>Machine Integration</option>
-        <option>ROS 2 Gateway Development</option>
-        <option>CAN / J1939 Integration</option>
-        <option>Vision AI / Safety Application</option>
-        <option>Remote Control / Semi-Autonomous</option>
-        <option>Edge Computer Deployment</option>
-        <option>Other</option>
-      </select>
-      <textarea name="message" placeholder="Tell us about your project..." required></textarea>
-      <button type="submit">Create Email Draft</button>
-      <div class="lls-chat-status" id="llsChatStatus"></div>
-    </form>
+    <div class="lls-chat-header"><img src="images/logicloop_icon_white.png" alt=""/><div><div class="lls-chat-title">Ask Logic Loop</div><div class="lls-chat-subtitle">Machine Integration • ROS 2 • Vision AI • CAN</div></div><button class="lls-chat-close" id="llsChatClose" type="button">×</button></div>
+    <form class="lls-chat-form" id="llsChatForm"><input name="name" placeholder="Your Name" required/><input name="email" type="email" placeholder="Email Address" required/><input name="company" placeholder="Company (Optional)"/><select name="project"><option>Machine Integration</option><option>ROS 2 Development</option><option>Vision AI</option><option>CAN / J1939</option><option>Remote Control</option><option>Other</option></select><textarea name="message" placeholder="Tell us about your project..." required></textarea><button type="submit">Create Email Draft</button><div class="lls-chat-status" id="llsChatStatus"></div></form>
   </div>
 </div>
-<script>
+
+<script id="lls-chatbot-script">
 (function(){
 const widget=document.getElementById('llsChatWidget');
 const toggle=document.getElementById('llsChatToggle');
 const close=document.getElementById('llsChatClose');
 const form=document.getElementById('llsChatForm');
 const status=document.getElementById('llsChatStatus');
-const destination='logicloopsystems@gmail.com';
-if(!widget||!toggle||!form)return;
-function setOpen(open){widget.classList.toggle('open',open);toggle.setAttribute('aria-expanded',open?'true':'false');}
-toggle.addEventListener('click',()=>setOpen(!widget.classList.contains('open')));
-close&&close.addEventListener('click',()=>setOpen(false));
+if(!widget||!toggle||!form) return;
+toggle.addEventListener('click',()=>{widget.classList.toggle('open');});
+close&&close.addEventListener('click',()=>{widget.classList.remove('open');});
 form.addEventListener('submit',function(e){
   e.preventDefault();
   const fd=new FormData(form);
   const subject='Website Inquiry - '+(fd.get('project')||'Logic Loop Systems');
-  const body=`Name: ${fd.get('name')}\nEmail: ${fd.get('email')}\nCompany: ${fd.get('company')||'Not provided'}\n\nProject Type:\n${fd.get('project')}\n\nMessage:\n${fd.get('message')}\n\nSent from logicloopsystems.com website widget.`;
-  window.location.href='mailto:'+destination+'?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-  status.textContent='Opening email draft...';
+  const body=`Name: ${fd.get('name')}
+Email: ${fd.get('email')}
+Company: ${fd.get('company')||'Not provided'}
+
+Project Type:
+${fd.get('project')}
+
+Message:
+${fd.get('message')}`;
+  window.location.href='mailto:logicloopsystems@gmail.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  if(status) status.textContent='Opening email draft...';
 });
 })();
 </script>
+
+<a class="back-to-top" href="index.html#hero" title="Back to home">↑</a>
 </body></html>

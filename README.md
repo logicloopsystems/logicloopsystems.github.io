@@ -1,3 +1,7 @@
+Logic Loop Systems Website Bundle v1.6.0
+
+Updates: refined About section, changed product scramble label to PRODUCTS, added floating back-to-home button.
+
 Logic Loop Systems Website Bundle v1.1.5
 
 Changes:
@@ -38,3 +42,8 @@ Contact target: logicloopsystems@gmail.com
 
 ## v1.1.4
 - Balanced the home hero and technology carousel spacing so the icon carousel is visible on first load without squeezing the next section into view.
+
+
+## v1.6.3
+- Standardized section/page labels using `<div class="scramble v1">...</div>` style.
+- Updated About section to full viewport height to prevent footer appearing too early.
