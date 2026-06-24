@@ -4851,3 +4851,45 @@ html{
     padding-top: 0 !important;
   }
 }
+
+/* Logic Loop Systems v1.6.4 - mobile anchor/menu fix
+   Close the Webflow mobile menu before scrolling so the menu/footer overlay
+   does not remain visible when tapping About/Product/Services/etc. */
+@media screen and (max-width: 991px){
+  .navbar-mobile{ z-index:1002 !important; }
+  .nav-menu{ z-index:1003 !important; }
+
+  #about.lls-home-content{
+    min-height:auto !important;
+    padding-top:4.25rem !important;
+    padding-bottom:4.25rem !important;
+  }
+
+  #about.lls-home-content .lls-content-wrap{
+    gap:.8rem !important;
+  }
+
+  #about.lls-home-content .lls-section-title{
+    font-size:clamp(1.85rem,8vw,2.7rem) !important;
+    line-height:1.04 !important;
+  }
+
+  #about.lls-home-content .lls-section-lead{
+    font-size:.95rem !important;
+    line-height:1.45 !important;
+  }
+
+  #about.lls-home-content .lls-info-card{
+    padding:.95rem !important;
+  }
+
+  #about.lls-home-content .lls-info-card p{
+    font-size:.86rem !important;
+    line-height:1.38 !important;
+  }
+
+  #about.lls-home-content .lls-mini-list div{
+    padding:.58rem .75rem !important;
+    font-size:.78rem !important;
+  }
+}

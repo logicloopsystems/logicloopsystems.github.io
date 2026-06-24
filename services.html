@@ -298,6 +298,40 @@ a{
 <!-- ASK LOGIC LOOP WIDGET -->
 <!-- Place before 
 <a class="back-to-top" href="index.html#hero" title="Back to home">↑</a>
+
+<script id="lls-mobile-anchor-menu-fix">
+(function(){
+  function closeMobileMenu(){
+    var openButton=document.querySelector('.navbar-mobile .w-nav-button.w--open');
+    if(openButton){ openButton.click(); return; }
+
+    document.querySelectorAll('.navbar-mobile .w--open').forEach(function(el){
+      el.classList.remove('w--open');
+    });
+  }
+
+  function scrollToTarget(hash){
+    var target=document.querySelector(hash);
+    if(!target) return;
+    var top=target.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: top, behavior: 'auto' });
+  }
+
+  document.querySelectorAll('.navbar-mobile a[href^="#"], .wrapper-link-navbar a[href^="#"]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      var hash=this.getAttribute('href');
+      if(!hash || hash==='#') return;
+      var target=document.querySelector(hash);
+      if(!target) return;
+      e.preventDefault();
+      closeMobileMenu();
+      window.location.hash=hash;
+      setTimeout(function(){ scrollToTarget(hash); }, 35);
+    });
+  });
+})();
+</script>
+
 </body> -->
 <!-- ========================= -->
 <style>
@@ -527,4 +561,38 @@ ${fd.get('message')}`;
 </script>
 
 <a class="back-to-top" href="index.html#hero" title="Back to home">↑</a>
+
+<script id="lls-mobile-anchor-menu-fix">
+(function(){
+  function closeMobileMenu(){
+    var openButton=document.querySelector('.navbar-mobile .w-nav-button.w--open');
+    if(openButton){ openButton.click(); return; }
+
+    document.querySelectorAll('.navbar-mobile .w--open').forEach(function(el){
+      el.classList.remove('w--open');
+    });
+  }
+
+  function scrollToTarget(hash){
+    var target=document.querySelector(hash);
+    if(!target) return;
+    var top=target.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: top, behavior: 'auto' });
+  }
+
+  document.querySelectorAll('.navbar-mobile a[href^="#"], .wrapper-link-navbar a[href^="#"]').forEach(function(link){
+    link.addEventListener('click',function(e){
+      var hash=this.getAttribute('href');
+      if(!hash || hash==='#') return;
+      var target=document.querySelector(hash);
+      if(!target) return;
+      e.preventDefault();
+      closeMobileMenu();
+      window.location.hash=hash;
+      setTimeout(function(){ scrollToTarget(hash); }, 35);
+    });
+  });
+})();
+</script>
+
 </body></html>
