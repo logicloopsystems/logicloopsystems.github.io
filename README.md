@@ -44,6 +44,13 @@ Contact target: logicloopsystems@gmail.com
 - Balanced the home hero and technology carousel spacing so the icon carousel is visible on first load without squeezing the next section into view.
 
 
-## v1.6.4
+## v2.1.0
 - Standardized section/page labels using `<div class="scramble v1">...</div>` style.
 - Updated About section to full viewport height to prevent footer appearing too early.
+
+
+## v2.1.0 Content polish
+- Professional Hero Set B rotation.
+- Updated About, Products, Services, Projects, Workflow, Integration content.
+- Renamed collision mitigation references to Machine Safety System.
+- Preserved Ask Logic Loop branding.

@@ -4893,3 +4893,105 @@ html{
     font-size:.78rem !important;
   }
 }
+
+
+/* Logic Loop Systems v2.1.0 - hero lock + services polish */
+/* Keep the rotating hero line from pushing the subtitle up/down. */
+#llsHeroLine{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:3em !important;
+  text-align:center !important;
+}
+#hero .block-text-hero{
+  min-height:22rem !important;
+  justify-content:center !important;
+}
+.hero-subtitle,
+.lls-hero-subtitle{
+  min-height:3.5rem !important;
+}
+
+/* Services: align like Projects and keep the whole section in one clean view. */
+#services.main-section.pricing{
+  min-height:100vh !important;
+  display:flex !important;
+  align-items:center !important;
+  background:#000 !important;
+  overflow:hidden !important;
+}
+#services .main-container,
+#services .wrapper-padding{
+  width:100% !important;
+}
+#services .wrapper-pricing{
+  padding-top:2.2rem !important;
+  padding-bottom:2.2rem !important;
+  gap:.9rem !important;
+  grid-row-gap:.9rem !important;
+}
+#services .title-pricing{
+  gap:.15rem !important;
+  grid-row-gap:.15rem !important;
+  align-items:center !important;
+  text-align:center !important;
+}
+#services .medium-big-text.enterence{
+  font-size:clamp(2.15rem,4vw,4.8rem) !important;
+  line-height:.98 !important;
+}
+#services .medium-big-text.muted{
+  font-size:clamp(1.35rem,2.15vw,2.45rem) !important;
+  line-height:1.08 !important;
+  color:rgba(255,255,255,.62) !important;
+  white-space:normal !important;
+}
+#services .content-pricing{
+  gap:.85rem !important;
+  grid-column-gap:.85rem !important;
+  grid-row-gap:.85rem !important;
+  align-items:stretch !important;
+}
+#services .title-card-pricing{
+  padding-top:.7rem !important;
+  padding-bottom:.7rem !important;
+}
+#services .body-card-pricing{
+  padding:.78rem !important;
+  gap:.58rem !important;
+  grid-row-gap:.58rem !important;
+}
+#services .large-text{
+  font-size:clamp(1.8rem,2.9vw,3.35rem) !important;
+  line-height:.95 !important;
+}
+#services .small-text,
+#services .text-secondary,
+#services .list{
+  font-size:.8rem !important;
+  line-height:1.22 !important;
+}
+#services .list{
+  gap:.22rem !important;
+  grid-row-gap:.22rem !important;
+  padding-left:.95rem !important;
+}
+#services .wrapper-button-secondary{
+  padding:.45rem .68rem !important;
+}
+
+@media screen and (max-width:991px){
+  #llsHeroLine{ min-height:3.4em !important; }
+  #hero .block-text-hero{ min-height:auto !important; }
+  #services.main-section.pricing{
+    min-height:auto !important;
+    display:block !important;
+    overflow:visible !important;
+    padding-top:4.5rem !important;
+    padding-bottom:4.5rem !important;
+  }
+  #services .wrapper-pricing{ padding-top:0 !important; }
+  #services .medium-big-text.enterence{ font-size:2rem !important; }
+  #services .medium-big-text.muted{ font-size:1.25rem !important; }
+}
